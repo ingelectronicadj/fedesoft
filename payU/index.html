@@ -64,7 +64,7 @@
     <input name="merchantId"    type="hidden"  value="508029">
     <input name="accountId"     type="hidden"  value="512326">
     <input name="description"   type="hidden"  value="TestPAYU">
-    <input name="referenceCode" type="hidden"  value="TestPayU" >
+    <input name="referenceCode" type="hidden"  value="TestPayU25_08_18" >
     <input name="amount"        type="hidden"  value="50000">
     <input name="currency"      type="hidden"  value="COP" >
     <input name="signature" id="signature" type="hidden"  value="5t5sRKSMtm04Sw5FrM64FvjUjX">
@@ -82,7 +82,7 @@
 
 //“ApiKey~merchantId~referenceCode~amount~currency”.
   function send(){
-var signature = md5("4Vj8eK4rloUd272L48hsrarnUA~508029~TestPayU~50000~COP");
+var signature = md5("4Vj8eK4rloUd272L48hsrarnUA~508029~TestPayU25_08_18~50000~COP");
  document.getElementById("signature").value = signature;
  alert(signature);//document.getElementById("myform").submit();
   }  

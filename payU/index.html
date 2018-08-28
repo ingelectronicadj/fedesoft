@@ -62,13 +62,14 @@
     Fecha de reserva: <br>
     <input type="date"><br>
     Número de personas:<br>
-    <input type="number" name="cantidad"><br><br>
+    <input type="text" name="txt_cantidad"><br><br>
     <input name="merchantId"    type="hidden"  value="508029">
     <input name="accountId"     type="hidden"  value="512326">
     <input name="description"   type="hidden"  value="Reserva Servicio Pasadía">
     <!--<input name="referenceCode" type="hidden"  value="TestPayU1313"> Este campo debe ser unico y debe variar con cada reserva-->
 		<input name="referenceCode" id="random" type="hidden" >
-		<input name="amount"        type="hidden"  value="50000">
+		<!--<input name="amount"        type="hidden"  value="50000">-->
+		<input name="amount"    id="coste"    type="hidden"  >
     <input name="tax"           type="hidden"  value="0"> <!--EN CASO DE NO TENER IVA SE ENVIA EN CERO SINO APLICAN LA NORMA 19%-->
     <input name="taxReturnBase" type="hidden"  value="0" > <!--EN CASO DE NO TENER IVA SE ENVIA EN CERO-->
     <input name="currency"      type="hidden"  value="COP">
@@ -87,15 +88,20 @@
 
 //“ApiKey~merchantId~referenceCode~amount~currency”.
   function send(){
-		var signature = md5("4Vj8eK4rloUd272L48hsrarnUA~508029~random~50000~COP");
+		var signature = md5("4Vj8eK4rloUd272L48hsrarnUA~508029~random~coste~COP");
 		document.getElementById("signature").value = signature;
-		alert(signature);//document.getElementById("myform").submit();
+		//alert(signature);//document.getElementById("myform").submit();
   }
 
 	function refCODE(min,max) {
 		var random = Math.floor(Math.random() * (999999999 - 1)) + 1;
 		document.getElementById("random").value = random;
+
+		n = parseInt(myform.txt_cantidad.value);
+		var coste = n*50000;
+		document.getElementById("coste").value = coste;
 	}
+
 </script>
 
 <!--Firma obtenida: a8168cb636341ca3f64d5f5db772c82d

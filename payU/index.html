@@ -66,8 +66,9 @@
     <input name="merchantId"    type="hidden"  value="508029">
     <input name="accountId"     type="hidden"  value="512326">
     <input name="description"   type="hidden"  value="Reserva Servicio Pasadía">
-    <input name="referenceCode" type="hidden"  value="TestPayU1313"> <!--Este campo debe ser unico y debe variar con cada reserva-->
-    <input name="amount"        type="hidden"  value="50000">
+    <!--<input name="referenceCode" type="hidden"  value="TestPayU1313"> Este campo debe ser unico y debe variar con cada reserva-->
+		<input name="referenceCode" id="random" type="hidden" >
+		<input name="amount"        type="hidden"  value="50000">
     <input name="tax"           type="hidden"  value="0"> <!--EN CASO DE NO TENER IVA SE ENVIA EN CERO SINO APLICAN LA NORMA 19%-->
     <input name="taxReturnBase" type="hidden"  value="0" > <!--EN CASO DE NO TENER IVA SE ENVIA EN CERO-->
     <input name="currency"      type="hidden"  value="COP">
@@ -76,7 +77,7 @@
     <input name="test"          type="hidden"  value="1" >
     <input name="responseUrl"    type="hidden"  value="http://www.test.com/response" >
     <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" >
-    <input class="btn btn-primary" id="sendPayment" onclick="send()" name="Submit" type="submit" value="Reservar" >
+    <input class="btn btn-primary" id="sendPayment" onclick="refCODE()" onclick="send()" name="Submit" type="submit" value="Reservar" >
   </form>
 </center>
 
@@ -86,10 +87,15 @@
 
 //“ApiKey~merchantId~referenceCode~amount~currency”.
   function send(){
-var signature = md5("4Vj8eK4rloUd272L48hsrarnUA~508029~TestPayU1313~50000~COP");
- document.getElementById("signature").value = signature;
- alert(signature);//document.getElementById("myform").submit();
+		var signature = md5("4Vj8eK4rloUd272L48hsrarnUA~508029~random~50000~COP");
+		document.getElementById("signature").value = signature;
+		alert(signature);//document.getElementById("myform").submit();
   }
+
+	function refCODE(min,max) {
+		var random = Math.floor(Math.random() * (999999999 - 1)) + 1;
+		document.getElementById("random").value = random;
+	}
 </script>
 
 <!--Firma obtenida: a8168cb636341ca3f64d5f5db772c82d

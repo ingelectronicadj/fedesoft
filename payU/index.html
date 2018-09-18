@@ -66,8 +66,8 @@
     <input name="merchantId"    type="hidden"  value="508029">
     <input name="accountId"     type="hidden"  value="512326">
     <input name="description"   type="hidden"  value="Reserva Servicio Pasadía">
-		<input name="referenceCode" type="hidden" value="TestPayU1313">
-		<input name="amount"        type="hidden"  value="50000">
+		<input name="referenceCode" type="hidden" id="referenceCode">
+		<input name="amount"        type="hidden"  id="amount">
     <input name="tax"           type="hidden"  value="0"> <!--EN CASO DE NO TENER IVA value=0-->
     <input name="taxReturnBase" type="hidden"  value="0" > <!--EN CASO DE NO TENER IVA value=0-->
     <input name="currency"      type="hidden"  value="COP">
@@ -84,7 +84,18 @@
 
 //“ApiKey~merchantId~referenceCode~amount~currency”.
   function send(){
-		var signature = md5("4Vj8eK4rloUd272L48hsrarnUA~508029~TestPayU1313~50000~COP");
+		var	n = parseInt(myform.txt_cantidad.value);
+		var amount = n*50000;
+		var amount = parseInt(amount);
+		document.getElementById("amount").value = amount;
+		var currency = 'COP';
+		var ApiKey = '4Vj8eK4rloUd272L48hsrarnUA';
+		var merchantId = parseInt(myform.merchantId.value);
+
+		var codeRandom = document.getElementById("referenceCode").value = Math.floor(Math.random() * (999 - 1)) + 1;
+		var referenceCode = codeRandom;
+
+		var signature = md5(ApiKey+"~"+merchantId+"~"+referenceCode+"~"+amount+"~"+currency);
 		document.getElementById("signature").value = signature;
 		alert(signature);
   }

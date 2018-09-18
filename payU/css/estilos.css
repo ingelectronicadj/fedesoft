@@ -10,3 +10,5 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     background: url(https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/calendar-16.png) center/80% no-repeat;
     opacity: 0.8
 }
+
+input{ border-radius: 5px;}

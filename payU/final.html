@@ -70,7 +70,7 @@
 		<input name="amount"        type="hidden"  id="amount">
     <input name="tax"           type="hidden"  value="0"> <!--EN CASO DE NO TENER IVA value=0-->
     <input name="taxReturnBase" type="hidden"  value="0" > <!--EN CASO DE NO TENER IVA value=0-->
-    <input name="currency"      type="hidden"  value="COP">
+    <input name="currency"      type="hidden"  id="currency2">
     <input name="signature" id="signature" type="hidden">
     <input name="test"  type="hidden"  value="0" > <!--value="1" prueba / value="0" produccion-->
     <input name="responseUrl"    type="hidden"  value="https://boraboracartagena.com/" >
@@ -88,7 +88,7 @@
 		var amount = n*50000;
 		var amount = parseInt(amount);
 		document.getElementById("amount").value = amount;
-		var currency = 'COP';
+		var currency = document.getElementById("currency2").value = 'COP';
 		var ApiKey = '5t5sRKSMtm04Sw5FrM64FvjUjX';
 		var merchantId = parseInt(myform.merchantId.value);
 

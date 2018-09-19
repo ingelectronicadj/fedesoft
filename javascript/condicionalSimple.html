@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            h1{
+                position: absolute;
+                top: 50%;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">
+            <script type="text/javascript">
+                var nombre, nota;
+                nombre = prompt('Ingrese nombre del alumno:');
+                nota = prompt('Ingrese la calificación 0-5:')
+                // CONDICIONALES
+                // > mayor
+                // >= mayor o igual
+                // < menor
+                // <= menor o igual
+                // != distinto
+                // == igual
+                if(nota>=4){
+                    document.write(nombre+' ha sido aprobado con un '+nota);
+                }
+                else{
+                    document.write(nombre+' ha sido reprobado con un '+nota);
+                }
+            </script>
+        </h1>
+    </body>
+</html>

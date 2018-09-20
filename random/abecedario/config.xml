@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.hostinazo.camg" 
+    version   = "2.6.0">
+
+	<name>Las Vocales</name>
+
+	<description>
+		Una App para aprender las vocales.
+	</description>
+
+	<author href="http://camg.hostinazo.com" email="carlooos_28@hotmail.com">
+		Carlos Moreno
+	</author>
+
+	<icon src="img/icono_60.png" width="72" height="72" />
+	<icon src="img/icono_48.png" width="48" height="48" />
+	<icon src="img/icono_32.png" width="32" height="32" />
+</widget>

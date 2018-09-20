@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Aprende a diario</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="js/alert.js"></script>
+        <link rel="stylesheet" href="css/centro.css">
+    </head>
+    <body align = "center">
+        <h1>Este es un ejemplo de codigo javascript desde un archivo externo.</h1>
+        <p>Tipo de datos javascript:</p>
+            <script type="text/javascript">
+                var num = 10;
+                var string = 'Cadena de texto';
+                var decimal = 6.66;
+                var booleano = true;
+                var array = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo','Todos los días'];
+                document.write('Enteros como: ' + num);
+                document.write('<br>');
+                document.write('Decimales como: ' + decimal);
+                document.write('<br>');
+                document.write('String como: ' + string);
+                document.write('<br>');
+                document.write('Banderas de estado como: '+booleano);
+                for(i=0;i<array.length;i++){
+                    alert(array[i]);
+                }
+                
+            </script>
+        <br>
+        <button onclick="alert('tambien puedes incluirle js a una etiqueta html como por ejemplo a este botón')">Aprecia un evento</button>
+        <!--Vale y en cuanto a operadores puedes pillarte
+            Los basicos + - * / 
+            Incrementar o decrementar ++ -- 
+            Logicos AND OR
+            Relacionales < > <= >= == != -->
+        <br>
+        <img src="images/dom.png" width="400" alt="Modelo de Objetos del Documento">
+        <p>Cuando se carga una página en un navegador se crean un número de objetos característicos del navegador según el contenido de la página.
+        La siguiente figura muestra la jerarquía de clases del Modelo de Objetos del Documento (Document Object Model - DOM).</p>
+        <!--PRINCIPALES OBJETOS DEL NAVEGADOR
+            Window : Propiedades basicas de la ventana
+                    defaultStatus -- mensaje en barra de estado
+                    frames -- matriz
+                    length -- numero de frames
+                    name -- nombre de la ventana
+                    self -- referencia a la propia ventana activa
+            Screen: Permite obtener información sobre la resolucion de la pantalla
+            Document: Caracteristicas de la pagina fondo - estilos
+            History: contiene info sobre los enlaces que el usuario a visitado, es usado para botones de avance o retroceso
+            Navigator: Permite obtener informacion del navegador con el que se esta visualizando el documento
+        -->
+    </body>
+</html>

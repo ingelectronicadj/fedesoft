@@ -14,7 +14,7 @@ function animConejo(contenedor,player,imagen){
   }	
 		$('#'+contenedor).html('<img src="img/'+imagen+'" class="imagDiv">')
   }
-
+ 
   function imgAuto(){ 
   	for(var inc = 24; inc <= 24; inc++){
   	 $('#imgAnid').append('<img src="img/'+inc+'.png"  id="img_'+inc+'" class="img-circle imgPeq">');

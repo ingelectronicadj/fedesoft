@@ -1,6 +1,6 @@
 var options = {
     chart: {
-        height: 350,
+        height: 310,
         type: 'bar',
     },
     plotOptions: {
@@ -71,13 +71,13 @@ var options = {
     },
     yaxis: {
         axisBorder: {
-            show: false
+            show: true,
         },
         axisTicks: {
-            show: false,
+            show: true,
         },
         labels: {
-            show: false,
+            show: true  ,
             formatter: function (val) {
                 return val + "%";
             }
@@ -86,7 +86,7 @@ var options = {
     },
     title: {
         text: 'Consumo historico mensual del cliente ID#hash, 2018',
-        floating: true,
+        floating: true,     
         offsetY: 320,
         align: 'center',
         style: {

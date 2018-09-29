@@ -4,8 +4,21 @@ var options = {
         type: 'pie',
     },
     series: [44, 55, 13, 43, 22],
-    labels: ["Activa", "Reactiva", "Potencia", "Penaliza", "dime Otra"],
-
+    labels: ["Activa", "Reactiva", "Potencia", "Penaliza", "Otra"],
+    
+    responsive: [{
+        breakpoint: 700,
+        options: {
+          plotOptions: {
+            bar: {
+              horizontal: false
+            }
+          },
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }]
 
 }
 

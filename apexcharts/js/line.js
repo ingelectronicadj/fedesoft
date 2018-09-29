@@ -10,7 +10,7 @@ var options = {
         enabled: false
     },
     stroke: {
-        curve: 'straigh' //'straight'-->marcada "smooth"-->curveada
+        curve: 'straight' //'straight'-->marcada "smooth"-->curveada
     },
     series: [{
         name: "Kw/h",
